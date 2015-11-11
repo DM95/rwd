@@ -1,0 +1,266 @@
+@import "variables";
+
+%Button {
+    	color: #FFF;
+        background-color: #E50914;
+    	display:inline-block;
+    	cursor:pointer;
+    	font-family:Arial, sans-serif;
+    	font-size:16px;
+    	padding:11px 12px;
+        text-align: center;
+    	text-decoration:none;
+    }
+$grey:grey;
+
+h1, h2, h3, p{
+font-family: Arial, sans-serif;
+}
+/* Navigation Menu - Background */
+.navigation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  list-style: none;
+  background: #111;
+
+
+.nav-item {
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+    .nav-item a {
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  color: white;
+        font-family: Arial, sans-serif;
+
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+    .nav-item a:hover {
+  color: #c74438;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
+}
+
+}
+
+ /* Nav Trigger */
+    .nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+
+label[for="nav-trigger"] {
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("../images/nav-icon.png");
+  background-size: contain;
+}
+    .nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+    .nav-trigger:checked + label {
+  left: 215px;
+}
+    .nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    }
+
+body {
+	/* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+}
+    /* Site Wrapper - Everything that isn't navigation */
+    .site-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white; 
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  
+  /* non-critical apperance styles */
+  pading: 4em;
+  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
+  background-size: 200%;
+        
+        .main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 300px;
+    background-image: url(../images/flix.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+    order: 1;
+            
+            
+    .txt {
+    width: auto;
+    padding-top: 55px;
+    padding-left: 50px;
+    
+    h3 {
+    color: white;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    text-align: left;
+    
+    @media #{$tablet} {
+    font-size: 30px;
+    width: 300px
+  }
+        @media #{$desktop} {
+    font-size: 50px;;
+    width: 500px;
+  }
+    }
+        
+   .Button {
+    	@extend %Button;
+        @media #{$tablet} {
+            font-size:30px;
+        }
+    }
+    }
+@media #{$tablet} {
+    height: 500px;
+    
+  }
+@media #{$desktop} {
+    height: 650px;
+    
+  }
+        }
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: #151212;
+    border-bottom: 2px solid #2d2727;
+    order: 3;
+
+.box {
+    color: lighten($grey, 10%);
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+    height: 150px auto;
+    width: 100%;    
+}
+        
+.box p {
+    width: 90%;
+    padding: 10px;
+    
+}
+    @media #{$tablet} {
+    flex-direction: row;
+    height: 300px;
+    padding: 20px;
+    
+  }
+    
+}
+    
+
+
+
+.box-flix {
+    width: 100%;
+    height: 550px;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0,0.7), rgba(0,0,0,0.7)), url("../images/movies1.jpg");    
+    background-position: center;
+    background-size: cover;
+    order: 3;
+    
+    .box-flix2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    
+    .button {
+    	@extend %Button;
+        @media #{$tablet} {
+            font-size:30px;
+        }
+    }
+    
+    h2 {
+    color: #fff;
+    margin: 0;
+    width: 90%;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+        @media #{$tablet} {
+            font-size:50px;
+            width: 60%;
+        }
+
+    }
+    
+    h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    width: 75%;
+    padding-top: 10px;
+        @media #{$tablet} {
+            font-size:30px;
+            width: 60%;
+        }
+    }
+        
+}
+@media #{$tablet} {
+         height: 800px;
+        }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color:gray; 
+    background-color: #000;
+    justify-content: center;
+    order: 4;
+
+ }
+        
+        
+}
